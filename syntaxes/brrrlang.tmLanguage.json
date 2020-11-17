@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "brrrLang",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#comment.ml"
+    },
+    {
+      "include": "#comment.doc"
+    },
+    {
+      "include": "#tag"
+    },
+    {
+      "include": "#primitives"
+    },
+    {
+      "include": "#angleBraces"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.brrrlang",
+          "match": "\\b(if|while|for|return|new)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.brrrlang",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.brrrlang",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comment": {
+      "name": "comment.line",
+      "begin": "//",
+      "end": "(\n|\r\n|\r)"
+    },
+    "comment.ml": {
+      "name": "comment.block",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    "comment.doc": {
+      "name": "comment.block.documentation",
+      "begin": "/\\*\\*",
+      "end": "\\*/"
+    },
+    "tag": {
+      "name": "storage.type",
+      "match": "@[a-zA-Z]+"
+    },
+    "primitives": {
+      "name": "storage.type.java",
+      "match": "(i8|i16|i32|i64|i128|u8|u16|u32|u64|u128|string)"
+    },
+    "angleBraces": {
+      "name": "storage.type",
+      "match": "(<|>)"
+    }
+  },
+  "scopeName": "source.brrrlang"
+}
