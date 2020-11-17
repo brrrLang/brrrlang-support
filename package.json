@@ -3,6 +3,11 @@
   "displayName": "brrrLang Support",
   "description": "Support for brrrLang",
   "version": "0.0.1",
+  "publisher": "LaSpruca",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brrrLang/brrrlang-support"
+  },
   "engines": {
     "vscode": "^1.51.0"
   },
